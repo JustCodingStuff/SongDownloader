@@ -6,4 +6,5 @@ requests
 bs4
 youtube-dl
 ffmpeg
+subprocess
 gunicorn
