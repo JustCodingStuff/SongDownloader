@@ -5,5 +5,5 @@ flask_sqlalchemy
 requests
 bs4
 youtube-dl
-ffmpeg-python
+ffmpeg/avconv
 gunicorn
