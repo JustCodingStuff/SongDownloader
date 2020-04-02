@@ -1,5 +1,6 @@
 from flask import Flask, redirect, url_for, render_template, request, session, flash, send_file
 from datetime import timedelta
+import subprocess
 from flask_sqlalchemy import SQLAlchemy
 import requests
 from bs4 import BeautifulSoup
@@ -74,7 +75,7 @@ def songDownloader():
         song_url = f"https://www.youtube.com{unique_search_href}"
 
         try:
-            subprocess.call(f"youtube-dl --extract-audio --audio-format mp3 -o  '{songName}.mp3' {song_url}")
+            subprocess.call(f"youtube-dl --extract-audio --audio-format mp3 -o  '{songName}.mp3' {song_url}", shell=True)
             flash("Song Download Successful!")
         except:
             flash("Download Unsuccessful")
