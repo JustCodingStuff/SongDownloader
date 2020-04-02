@@ -74,8 +74,7 @@ def songDownloader():
         song_url = f"https://www.youtube.com{unique_search_href}"
 
         try:
-            # os.system(f"youtube-dl --extract-audio --audio-format mp3 -o  '{songName}.mp3' {song_url}")
-            os.system("notepad")
+            os.system(f"youtube-dl --extract-audio --audio-format mp3 -o  '{songName}.mp3' {song_url}")
             flash("Song Download Successful!")
         except:
             flash("Download Unsuccessful")
